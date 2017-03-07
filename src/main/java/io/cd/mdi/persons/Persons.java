@@ -7,6 +7,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 import io.cd.mdi.refgenders.RefGenders;
+import io.cd.mdi.refmaritalstatus.RefMaritalStatus;
 import io.cd.mdi.refnations.RefNations;
 
 @Entity
@@ -25,18 +26,22 @@ public class Persons {
 	@JoinColumn(name = "nation_code", referencedColumnName = "nation_code")
 	@ManyToOne
 	private RefNations nationCode;
+	@JoinColumn(name = "marital_code", referencedColumnName = "marital_code")
+	@ManyToOne
+	private RefMaritalStatus maritalCode;
 		
 	public Persons() {
 		super();
 	}
 
-	public Persons(long personId, String personName, String personNewIc, RefGenders genderCode, RefNations nationCode) {
+	public Persons(long personId, String personName, String personNewIc, RefGenders genderCode, RefNations nationCode, RefMaritalStatus maritalCode) {
 		super();
 		this.personId = personId;
 		this.personName = personName;
 		this.personNewIc = personNewIc;
 		this.genderCode = genderCode;
 		this.nationCode = nationCode;
+		this.maritalCode = maritalCode;
 	}
 
 	public long getPersonId() {
@@ -77,6 +82,14 @@ public class Persons {
 
 	public void setNationCode(RefNations nationCode) {
 		this.nationCode = nationCode;
+	}
+
+	public RefMaritalStatus getMaritalCode() {
+		return maritalCode;
+	}
+
+	public void setMaritalCode(RefMaritalStatus maritalCode) {
+		this.maritalCode = maritalCode;
 	}
 	
 }
