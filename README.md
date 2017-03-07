@@ -1,2 +1,2 @@
 # mdi-cd
-RESTAPI to consume from CD 
+REST-API to consume from CD 
