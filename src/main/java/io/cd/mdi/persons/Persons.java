@@ -5,12 +5,14 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 import io.cd.mdi.refgenders.RefGenders;
 import io.cd.mdi.refmaritalstatus.RefMaritalStatus;
 import io.cd.mdi.refnations.RefNations;
 
 @Entity
+@Table(name = "persons")
 public class Persons {
 	
 	@Id
@@ -67,7 +69,7 @@ public class Persons {
 	public void setPersonNewIc(String personNewIc) {
 		this.personNewIc = personNewIc;
 	}
-
+	
 	public RefGenders getGenderCode() {
 		return genderCode;
 	}

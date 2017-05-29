@@ -5,8 +5,10 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "userid")
 public class Userid {
 		
 	@Column(name = "uid_staffno")
@@ -57,19 +59,19 @@ public class Userid {
 	@Column(name = "supervisor_id")
 	private String supervisorId;
 	@Column(name = "loginstatus")
-	private boolean loginstatus;
+	private Boolean loginstatus;
 	@Column(name = "uid_designation")
 	private String uidDesignation;
 	@Column(name = "uid_activests")
-	private boolean uidActivests;
+	private Boolean uidActivests;
 	@Column(name = "uid_mmc")
-	private long uidMmc;
+	private Long uidMmc;
 	@Column(name = "uid_useric")
 	private String uidUseric;
 	@Column(name = "uid_passport")
 	private String uidPassport;
 	@Column(name = "cas_status")
-	private boolean casStatus;
+	private Boolean casStatus;
 	@Column(name = "discipline_code")
 	private String disciplineCode;
 	@Column(name = "reshuffle_status")
@@ -85,8 +87,8 @@ public class Userid {
 			String uidModulelevel, String uidAccesslevel, String uidUserlevel, String uidUseridsts, String uidEmail,
 			String uidIdno, String uidStaffname, Date uidEffdate, String uidMinutiae, String uidVerificationtype,
 			String uidCreateuser, Date uidCreatedate, String uidUpdateuser, Date uidUpdatedate, String uidRecordsts,
-			String uidChangepwd, String uidLocation, String supervisorId, boolean loginstatus, String uidDesignation,
-			boolean uidActivests, long uidMmc, String uidUseric, String uidPassport, boolean casStatus,
+			String uidChangepwd, String uidLocation, String supervisorId, Boolean loginstatus, String uidDesignation,
+			Boolean uidActivests, Long uidMmc, String uidUseric, String uidPassport, Boolean casStatus,
 			String disciplineCode, String reshuffleStatus, String transferOutStatus) {
 		super();
 		this.uidStaffno = uidStaffno;
@@ -308,11 +310,11 @@ public class Userid {
 		this.supervisorId = supervisorId;
 	}
 
-	public boolean isLoginstatus() {
+	public Boolean isLoginstatus() {
 		return loginstatus;
 	}
 
-	public void setLoginstatus(boolean loginstatus) {
+	public void setLoginstatus(Boolean loginstatus) {
 		this.loginstatus = loginstatus;
 	}
 
@@ -324,19 +326,19 @@ public class Userid {
 		this.uidDesignation = uidDesignation;
 	}
 
-	public boolean isUidActivests() {
+	public Boolean isUidActivests() {
 		return uidActivests;
 	}
 
-	public void setUidActivests(boolean uidActivests) {
+	public void setUidActivests(Boolean uidActivests) {
 		this.uidActivests = uidActivests;
 	}
 
-	public long getUidMmc() {
+	public Long getUidMmc() {
 		return uidMmc;
 	}
 
-	public void setUidMmc(long uidMmc) {
+	public void setUidMmc(Long uidMmc) {
 		this.uidMmc = uidMmc;
 	}
 
@@ -356,11 +358,11 @@ public class Userid {
 		this.uidPassport = uidPassport;
 	}
 
-	public boolean isCasStatus() {
+	public Boolean isCasStatus() {
 		return casStatus;
 	}
 
-	public void setCasStatus(boolean casStatus) {
+	public void setCasStatus(Boolean casStatus) {
 		this.casStatus = casStatus;
 	}
 
