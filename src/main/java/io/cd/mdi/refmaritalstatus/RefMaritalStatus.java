@@ -1,6 +1,6 @@
 package io.cd.mdi.refmaritalstatus;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,15 +17,15 @@ public class RefMaritalStatus {
 	@Column(name = "marital_name")
 	private String maritalName;
 	@Column(name = "created_date")
-	private Date createdDate;
+	private LocalDateTime createdDate;
 	@Column(name = "updated_date")
-	private Date updatedDate;
+	private LocalDateTime updatedDate;
 	
 	public RefMaritalStatus() {
 		super();
 	}
 
-	public RefMaritalStatus(String maritalCode, String maritalName, Date createdDate, Date updatedDate) {
+	public RefMaritalStatus(String maritalCode, String maritalName, LocalDateTime createdDate, LocalDateTime updatedDate) {
 		super();
 		this.maritalCode = maritalCode;
 		this.maritalName = maritalName;
@@ -49,19 +49,19 @@ public class RefMaritalStatus {
 		this.maritalName = maritalName;
 	}
 
-	public Date getCreatedDate() {
+	public LocalDateTime getCreatedDate() {
 		return createdDate;
 	}
 
-	public void setCreatedDate(Date createdDate) {
+	public void setCreatedDate(LocalDateTime createdDate) {
 		this.createdDate = createdDate;
 	}
 
-	public Date getUpdatedDate() {
+	public LocalDateTime getUpdatedDate() {
 		return updatedDate;
 	}
 
-	public void setUpdatedDate(Date updatedDate) {
+	public void setUpdatedDate(LocalDateTime updatedDate) {
 		this.updatedDate = updatedDate;
 	}
 	

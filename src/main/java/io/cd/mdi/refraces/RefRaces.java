@@ -1,6 +1,6 @@
 package io.cd.mdi.refraces;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,18 +19,18 @@ public class RefRaces {
 	@Column(name = "created_by")
 	private String createdBy;
 	@Column(name = "created_date")
-	private Date createdDate;
+	private LocalDateTime createdDate;
 	@Column(name = "updated_by")
 	private String updatedBy;
 	@Column(name = "updated_date")
-	private Date updatedDate;
+	private LocalDateTime updatedDate;
 	
 	public RefRaces() {
 		super();
 	}
 
-	public RefRaces(String raceCode, String raceName, boolean nationalityStatus, String createdBy, Date createdDate,
-			String updatedBy, Date updatedDate) {
+	public RefRaces(String raceCode, String raceName, boolean nationalityStatus, String createdBy, LocalDateTime createdDate,
+			String updatedBy, LocalDateTime updatedDate) {
 		super();
 		this.raceCode = raceCode;
 		this.raceName = raceName;
@@ -73,11 +73,11 @@ public class RefRaces {
 		this.createdBy = createdBy;
 	}
 
-	public Date getCreatedDate() {
+	public LocalDateTime getCreatedDate() {
 		return createdDate;
 	}
 
-	public void setCreatedDate(Date createdDate) {
+	public void setCreatedDate(LocalDateTime createdDate) {
 		this.createdDate = createdDate;
 	}
 
@@ -89,11 +89,11 @@ public class RefRaces {
 		this.updatedBy = updatedBy;
 	}
 
-	public Date getUpdatedDate() {
+	public LocalDateTime getUpdatedDate() {
 		return updatedDate;
 	}
 
-	public void setUpdatedDate(Date updatedDate) {
+	public void setUpdatedDate(LocalDateTime updatedDate) {
 		this.updatedDate = updatedDate;
 	}
 	

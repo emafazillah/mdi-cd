@@ -1,6 +1,6 @@
 package io.cd.mdi.refgenders;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,15 +17,15 @@ public class RefGenders {
 	@Column(name = "gender_name")
 	private String genderName;
 	@Column(name = "created_date")
-	private Date createdDate;
+	private LocalDateTime createdDate;
 	@Column(name = "updated_date")
-	private Date updatedDate;
+	private LocalDateTime updatedDate;
 	
 	public RefGenders() {
 		super();
 	}
 
-	public RefGenders(String genderCode, String genderName, Date createdDate, Date updatedDate) {
+	public RefGenders(String genderCode, String genderName, LocalDateTime createdDate, LocalDateTime updatedDate) {
 		super();
 		this.genderCode = genderCode;
 		this.genderName = genderName;
@@ -49,19 +49,19 @@ public class RefGenders {
 		this.genderName = genderName;
 	}
 
-	public Date getCreatedDate() {
+	public LocalDateTime getCreatedDate() {
 		return createdDate;
 	}
 
-	public void setCreatedDate(Date createdDate) {
+	public void setCreatedDate(LocalDateTime createdDate) {
 		this.createdDate = createdDate;
 	}
 
-	public Date getUpdatedDate() {
+	public LocalDateTime getUpdatedDate() {
 		return updatedDate;
 	}
 
-	public void setUpdatedDate(Date updatedDate) {
+	public void setUpdatedDate(LocalDateTime updatedDate) {
 		this.updatedDate = updatedDate;
 	}
 	

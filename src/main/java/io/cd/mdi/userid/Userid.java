@@ -1,6 +1,6 @@
 package io.cd.mdi.userid;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -37,7 +37,7 @@ public class Userid {
 	@Column(name = "uid_staffname")
 	private String uidStaffname;
 	@Column(name = "uid_effdate")
-	private Date uidEffdate;
+	private LocalDateTime uidEffdate;
 	@Column(name = "uid_minutiae")
 	private String uidMinutiae;
 	@Column(name = "uid_verificationtype")
@@ -45,11 +45,11 @@ public class Userid {
 	@Column(name = "uid_createuser")
 	private String uidCreateuser;
 	@Column(name = "uid_createdate")
-	private Date uidCreatedate;
+	private LocalDateTime uidCreatedate;
 	@Column(name = "uid_updateuser")
 	private String uidUpdateuser;
 	@Column(name = "uid_updatedate")
-	private Date uidUpdatedate;
+	private LocalDateTime uidUpdatedate;
 	@Column(name = "uid_recordsts")
 	private String uidRecordsts;
 	@Column(name = "uid_changepwd")
@@ -85,8 +85,8 @@ public class Userid {
 
 	public Userid(String uidStaffno, String uidCostcentre, String uidUserid, String uidPassword, String uidCurrentsts,
 			String uidModulelevel, String uidAccesslevel, String uidUserlevel, String uidUseridsts, String uidEmail,
-			String uidIdno, String uidStaffname, Date uidEffdate, String uidMinutiae, String uidVerificationtype,
-			String uidCreateuser, Date uidCreatedate, String uidUpdateuser, Date uidUpdatedate, String uidRecordsts,
+			String uidIdno, String uidStaffname, LocalDateTime uidEffdate, String uidMinutiae, String uidVerificationtype,
+			String uidCreateuser, LocalDateTime uidCreatedate, String uidUpdateuser, LocalDateTime uidUpdatedate, String uidRecordsts,
 			String uidChangepwd, String uidLocation, String supervisorId, Boolean loginstatus, String uidDesignation,
 			Boolean uidActivests, Long uidMmc, String uidUseric, String uidPassport, Boolean casStatus,
 			String disciplineCode, String reshuffleStatus, String transferOutStatus) {
@@ -222,11 +222,11 @@ public class Userid {
 		this.uidStaffname = uidStaffname;
 	}
 
-	public Date getUidEffdate() {
+	public LocalDateTime getUidEffdate() {
 		return uidEffdate;
 	}
 
-	public void setUidEffdate(Date uidEffdate) {
+	public void setUidEffdate(LocalDateTime uidEffdate) {
 		this.uidEffdate = uidEffdate;
 	}
 
@@ -254,11 +254,11 @@ public class Userid {
 		this.uidCreateuser = uidCreateuser;
 	}
 
-	public Date getUidCreatedate() {
+	public LocalDateTime getUidCreatedate() {
 		return uidCreatedate;
 	}
 
-	public void setUidCreatedate(Date uidCreatedate) {
+	public void setUidCreatedate(LocalDateTime uidCreatedate) {
 		this.uidCreatedate = uidCreatedate;
 	}
 
@@ -270,11 +270,11 @@ public class Userid {
 		this.uidUpdateuser = uidUpdateuser;
 	}
 
-	public Date getUidUpdatedate() {
+	public LocalDateTime getUidUpdatedate() {
 		return uidUpdatedate;
 	}
 
-	public void setUidUpdatedate(Date uidUpdatedate) {
+	public void setUidUpdatedate(LocalDateTime uidUpdatedate) {
 		this.uidUpdatedate = uidUpdatedate;
 	}
 

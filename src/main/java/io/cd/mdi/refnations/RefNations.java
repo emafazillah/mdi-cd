@@ -1,6 +1,6 @@
 package io.cd.mdi.refnations;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,15 +19,15 @@ public class RefNations {
 	@Column(name = "nation_nationality")
 	private String nationNationality;
 	@Column(name = "created_date")
-	private Date createdDate;
+	private LocalDateTime createdDate;
 	@Column(name = "updated_date")
-	private Date updatedDate;
+	private LocalDateTime updatedDate;
 	
 	public RefNations() {
 		super();
 	}
 
-	public RefNations(String nationCode, String nationName, String nationNationality, Date createdDate, Date updatedDate) {
+	public RefNations(String nationCode, String nationName, String nationNationality, LocalDateTime createdDate, LocalDateTime updatedDate) {
 		super();
 		this.nationCode = nationCode;
 		this.nationName = nationName;
@@ -60,19 +60,19 @@ public class RefNations {
 		this.nationNationality = nationNationality;
 	}
 
-	public Date getCreatedDate() {
+	public LocalDateTime getCreatedDate() {
 		return createdDate;
 	}
 
-	public void setCreatedDate(Date createdDate) {
+	public void setCreatedDate(LocalDateTime createdDate) {
 		this.createdDate = createdDate;
 	}
 
-	public Date getUpdatedDate() {
+	public LocalDateTime getUpdatedDate() {
 		return updatedDate;
 	}
 
-	public void setUpdatedDate(Date updatedDate) {
+	public void setUpdatedDate(LocalDateTime updatedDate) {
 		this.updatedDate = updatedDate;
 	}
 	
